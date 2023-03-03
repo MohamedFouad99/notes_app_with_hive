@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:notes_app_with_hive/constant/color.dart';
+import 'package:notes_app_with_hive/constant/constant.dart';
 import 'package:notes_app_with_hive/widgets/custom_text_field.dart';
 
 class AddNoteBottomSheet extends StatelessWidget {

@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:notes_app_with_hive/constant/color.dart';
+import 'package:notes_app_with_hive/constant/constant.dart';
 
 class CustomTextFiled extends StatelessWidget {
   const CustomTextFiled(
