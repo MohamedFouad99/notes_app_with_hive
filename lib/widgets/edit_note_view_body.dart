@@ -16,8 +16,8 @@ class EditNoteViewBody extends StatelessWidget {
             title: 'Edit Note',
             icon: Icons.check,
           ),
-          const SizedBox(
-            height: 12,
+          SizedBox(
+            height: MediaQuery.of(context).size.height * .06,
           ),
           const CustomTextFiled(
             hint: 'Title',
