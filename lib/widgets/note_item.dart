@@ -1,11 +1,12 @@
 // ignore_for_file: prefer_const_constructors
 
 import 'package:flutter/material.dart';
+import 'package:notes_app_with_hive/models/note_model.dart';
 import 'package:notes_app_with_hive/widgets/edit_note_view.dart';
 
 class NoteItem extends StatelessWidget {
-  const NoteItem({super.key});
-
+  const NoteItem({super.key, required this.note});
+  final NoteModel note;
   @override
   Widget build(BuildContext context) {
     return InkWell(
@@ -14,7 +15,7 @@ class NoteItem extends StatelessWidget {
       child: Container(
         padding: EdgeInsets.symmetric(horizontal: 16, vertical: 14),
         decoration: BoxDecoration(
-          color: Colors.yellow,
+          color: Color(note.color),
           borderRadius: BorderRadius.circular(16),
         ),
         child: Column(
@@ -25,12 +26,12 @@ class NoteItem extends StatelessWidget {
               title: Padding(
                 padding: const EdgeInsets.only(bottom: 18),
                 child: Text(
-                  'flutter',
+                  note.title,
                   style: TextStyle(color: Colors.black, fontSize: 24),
                 ),
               ),
               subtitle: Text(
-                'build your carerr build your carerr build your carerr build your carerr',
+                note.subtitle,
                 style: TextStyle(
                     color: Colors.black.withOpacity(.6), fontSize: 18),
               ),
@@ -42,7 +43,7 @@ class NoteItem extends StatelessWidget {
                   )),
             ),
             Text(
-              'july5,2023',
+              note.date,
               style: TextStyle(
                 color: Colors.black.withOpacity(.6),
               ),
