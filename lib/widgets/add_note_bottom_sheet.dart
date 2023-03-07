@@ -5,6 +5,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 
 import 'package:notes_app_with_hive/cubits/add_note_cubit/add_note_cubit.dart';
 
+import '../cubits/cubit/notes_cubit.dart';
 import 'add_note_form.dart';
 
 class AddNoteBottomSheet extends StatelessWidget {
@@ -20,10 +21,9 @@ class AddNoteBottomSheet extends StatelessWidget {
         padding: const EdgeInsets.all(16),
         child: BlocConsumer<AddNoteCubit, AddNoteState>(
           listener: (context, state) {
-            if (state is AddNoteFailure) {
-              print("fillleddd${state.errorMessage}");
-            }
+            if (state is AddNoteFailure) {}
             if (state is AddNoteSuccess) {
+              BlocProvider.of<NotesCubit>(context).fetchAllNotes();
               Navigator.pop(context);
             }
           },
