@@ -13,7 +13,11 @@ class NoteItem extends StatelessWidget {
   Widget build(BuildContext context) {
     return InkWell(
       onTap: () => Navigator.push(
-          context, MaterialPageRoute(builder: ((context) => EditNoteView()))),
+          context,
+          MaterialPageRoute(
+              builder: ((context) => EditNoteView(
+                    note: note,
+                  )))),
       child: Container(
         padding: EdgeInsets.symmetric(horizontal: 16, vertical: 14),
         decoration: BoxDecoration(
