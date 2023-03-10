@@ -2,7 +2,7 @@ import 'package:bloc/bloc.dart';
 import 'package:hive_flutter/hive_flutter.dart';
 
 import 'package:meta/meta.dart';
-import 'package:notes_app_with_hive/models/note_model.dart';
+import '../../models/note_model.dart';
 
 import '../../constant/constant.dart';
 

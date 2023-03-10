@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:notes_app_with_hive/models/note_model.dart';
+import '../models/note_model.dart';
 
 import 'edit_note_view_body.dart';
 
