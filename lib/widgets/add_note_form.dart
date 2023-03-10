@@ -1,10 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:intl/intl.dart';
-import 'package:notes_app_with_hive/cubits/add_note_cubit/add_note_cubit.dart';
-import 'package:notes_app_with_hive/models/note_model.dart';
+import '../cubits/add_note_cubit/add_note_cubit.dart';
+import '../models/note_model.dart';
 
 import '../constant/constant.dart';
+import 'colors_list_view.dart';
 import 'custom_text_field.dart';
 
 class AddNoteForm extends StatefulWidget {
@@ -47,6 +48,10 @@ class _AddNoteFormState extends State<AddNoteForm> {
               subTitle = value;
             },
           ),
+          const SizedBox(
+            height: 18,
+          ),
+          const ColorListView(),
           const SizedBox(
             height: 18,
           ),
